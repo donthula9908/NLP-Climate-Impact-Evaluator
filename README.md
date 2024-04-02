@@ -4,7 +4,6 @@
 ### MPS – Data Science, 
 ### DATA 690 – NLP for Practitioners, 
 ## Prof. Antonio Diana
-#### Date: August 16th, 2023
 
 
 
