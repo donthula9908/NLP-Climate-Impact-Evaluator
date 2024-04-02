@@ -1,10 +1,10 @@
 # Natural Language Processing for Advancing Climate Change Assessment and Policy Decision Making
 
--Naveen Donthula
--Dibya Pandey
--Snigdha Chigurupati
-MPS – Data Science, 
-DATA 690 – NLP for Practitioners, 
+## Naveen Donthula
+## Dibya Pandey
+## Snigdha Chigurupati
+### MPS – Data Science, 
+### DATA 690 – NLP for Practitioners, 
 ## Prof. Antonio Diana
 #### Date: August 16th, 2023
 
