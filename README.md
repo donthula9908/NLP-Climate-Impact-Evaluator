@@ -1,4 +1,4 @@
-Natural Language Processing for Advancing Climate Change Assessment and Policy Decision Making
+# Natural Language Processing for Advancing Climate Change Assessment and Policy Decision Making
 
 -Naveen Donthula
 -Dibya Pandey
