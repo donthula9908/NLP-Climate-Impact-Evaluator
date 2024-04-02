@@ -118,5 +118,3 @@ https://www.displayr.com/what-is-dendrogram/
 - 9. Lim, Y. (2022, April 5). Stacked ensembles - improving model performance on a higher level. Medium. https://towardsdatascience.com/stacked-ensembles-improving-model-performance-on-a-higher-level-99ffc4ea5523
 - 10. Chamblee, B. (2022, February 7). What is cosine similarity? how to compare text and images in Python. Medium. 
 https://towardsdatascience.com/what-is-cosine-similarity-how-to-compare-text-and-images-in-python-d2bb6e411ef0
-
-![image](https://github.com/donthula9908/Text-Summarization/assets/113458680/0ac11382-e333-4f89-8a58-f2d4542e2a68)
