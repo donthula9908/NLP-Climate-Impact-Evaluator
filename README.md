@@ -90,173 +90,6 @@ Predictive sentiment analysis on summaries has been shown to achieve high perfor
 This research implements cosine similarity to compare semantic closeness between regional climate documents. The text data from Western, Central, and Eastern US is preprocessed by lowercasing, removing punctuation, and stemming words to their root forms. Scikit-learn's TfidfVectorizer then converts the normalized text into TF-IDF vector representations encapsulating word frequencies. Cosine similarity is calculated between vector pairs using matrix multiplication to quantify similarity based on the angle between vectors.
 Computing similarity enables discovering relationships within the corpus to identify patterns, trends, and variations across regions. The code demonstrates a robust process for textual similarity analysis using TF-IDF vectorization and cosine similarity. This unsupervised technique is foundational for numerous applications in information retrieval, natural language processing, and text analytics. Overall, cosine similarity provides an efficient method to compare documents based on semantic content rather than surface-level features. Assessing similarity is crucial for clustering documents, improving search relevancy, analyzing trends, and gaining insights from unstructured text data.[10]
 
-
-
-
-
-
-
-# RESULTS AND DISCUSSION
-	West	Central	East
-Sentiment Analysis	{'neg': 0.063, 'neu': 0.871, 'pos': 0.066, 'compound': 0.0258}
-
-
-Subjectivity: 0.479284474206349
-The text is more objective.	{'neg': 0.095, 'neu': 0.832, 'pos': 0.072, 'compound': -0.9463}
-
-
-
-
-Subjectivity: 0.38706589706589706
-The text is more objective.	{'neg': 0.027, 'neu': 0.882, 'pos': 0.09, 'compound': 0.9543}
-
-
-Subjectivity: 0.3870967741935484
-The text is more objective.
-Percentages
-Of Sentiment	The percentage of positive sentiment is 7.0%
-The percentage of neutral sentiment is 87.3%
-The percentage of negative sentiment is 5.7%	The percentage of positive sentiment is 7.2%
-The percentage of neutral sentiment is 83.2%
-The percentage of negative sentiment is 9.5%	The percentage of positive sentiment is 9.0%
-The percentage of neutral sentiment is 88.2%
-The percentage of negative sentiment is 2.7%
-Named Entities	South African - NORP
-Roberts - PERSON
-Monday - DATE
-Phoenix - GPE
-25 straight days - DATE	39–73 mph - QUANTITY
-74 mph - QUANTITY
-a couple of weeks back - DATE
-July - DATE
-South Arkansas - GPE	July - DATE
-16.95 degrees - QUANTITY
-62.51 degrees - QUANTITY
-Fahrenheit - WORK_OF_ART
-a third - CARDINAL
-Topic Modeling	Topic 1: 
-  degrees (3.33)
-  climate (2.66)
-  report (2.00)
-  fahrenheit (2.00)
-  celsius (2.00))
-
-Topic 2:
-  fan (14.73)
-  blows (14.73)
-  water (14.73)
-  spraying (14.73)
-  mean (14.73)
-
-Topic 3:  
-  chair (8.99)
-  south (8.77)
-  opt (8.75)
-  single (8.26)
-  community (8.02)	Topic 1:
-  county (6.18)
-  daily (4.71)
-  temperature (4.32)
-  state (3.03)
-  lot (2.89)
-
-Topic 2: 
-  tropical (2.34)
-  probability (1.56)
-  civilization (1.56)
-  cyclone (1.56)
-  wind (1.56)
-
-Topic 3:
-  high (2.99)
-  approximately (2.48)
-  market (2.38)
-  highest (2.36)
-  sends (2.31)
-	Topic 1:
-  degree (4.90)
-  july (4.70)
-  record (4.40)
-  celsius (3.96)
-  fahrenheit (3.05)
-
-Topic 2:
-  hottest (3.37)
-  wide (2.68)
-  2019 (2.46)
-  london (2.41)
-  colleagues (2.36)
-
-Topic 3:
-  heat (2.56)
-  climate (2.43)
-  quite (2.05)
-  chance (1.95)
-  park (1.91)
-
-Word Frequency Analysis
-	‘degrees’: 5, ‘climate’: 4, 'Fahrenheit': 3, ‘report’:3, 'Celsius':2	'temperature': 4, 'County': 4, 'tropical': 3, 'change': 3, 
-'School': 3	'record': 6, 'Celsius': 4, 'degree': 4, 'climate': 4, 'Julys': 3
-Cosine Similarity	For East and West   : 0.7984706278521869
-For East and Central:0.5370735639592626
-For West and Central:0.5073597921336895
-Predictive Analysis	Accuracy: 0.8
-Precision: 1.0
-Recall: 0.8
-F1 Score: 0.88	Accuracy: 0.87
-Precision: 0.91
-Recall: 0.875
-F1 Score: 0.87	Accuracy: 0.91
-Precision: 0.93
-Recall: 0.91
-F1 Score: 0.92
-
-Word Cloud
-West
- 
-
-Central
- 
-East
- 
-
-
-
-Word Embeddings t-SNE scatterplot
-West
- 
-Central
- 
-East
- 
-Knowledge Graph
-West
- 
-Central
- 
-
-East
- 
-Hierarchical Clustering
-West
- 
-The dendrogram shows the relationship between the number of clusters and the delay in cutting carbon emissions. The closer the clusters are together, the more likely it is that the heat wave was caused by delayed cuts in carbon emissions.  
-
-
-
-
-
-
-
-Central
- 
-The dendrogram suggests that ignorance of climate change has led to an increase of carbon in the atmosphere due to which the temperature has reached 112OF.
-
-
-
-East
- 
-The dendrogram illustrates that heat wave was caused by a combination of factors, including delayed cuts in heat-trapping carbon emissions, the El Niño weather pattern, and high temperatures. July was the hottest month in the year 2023.
 CONCLUSION
 Text summarization along with Sentiment classification, Topic modeling, Hierarchical clustering techniques, and predictive analytics based on sentiment are invaluable for climate change analysis by distilling the key findings and conclusions from this vast corpus of climate data and research. These methodologies also help make complex climate knowledge more accessible to the public through summarized explainers. In the race to adapt policies before irreversible climate tipping points, text summarization along with Sentiment classification, Topic modeling, Hierarchical clustering, and predictive analytics based on sentiment is an indispensable tool for researchers to benefit from the latest insights emerging across diverse sources of climate data and literature.
 FUTURE DIRECTIONS
@@ -268,25 +101,19 @@ Exploring diverse NLP tasks like semantic role labeling to identify climate acto
 
 
 
-
-
-
-
-
-
 ## REFERENCES:
-1.Brownlee, J. (2019, August 7). A gentle introduction to text summarization. MachineLearningMastery.com. https://machinelearningmastery.com/gentle-introduction-text-summarization/
-2. NASA. (2022a, July 18). Climate change adaptation and mitigation. NASA.
+- 1.Brownlee, J. (2019, August 7). A gentle introduction to text summarization. MachineLearningMastery.com. https://machinelearningmastery.com/gentle-introduction-text-summarization/
+- 2. NASA. (2022a, July 18). Climate change adaptation and mitigation. NASA.
 https://climate.nasa.gov/solutions/adaptation-mitigation/
-3. Welcome to Vadersentiment’s documentation! Welcome to VaderSentiment’s documentation! - VaderSentiment 3.3.1 documentation. (n.d.). https://vadersentiment.readthedocs.io/en/latest/
-4. GeeksforGeeks. (2022, October 18). Named entity recognition. GeeksforGeeks. https://www.geeksforgeeks.org/named-entity-recognition/
-5. Yadav, K. (2022, November 8). The Complete Practical Guide to Topic Modelling. Medium. https://towardsdatascience.com/topic-modelling-f51e5ebfb40a
-6. Winastwan, R. (2020, October 2). Visualizing word embedding with PCA and T-Sne. Medium. https://towardsdatascience.com/visualizing-word-embedding-with-pca-and-t-sne-961a692509f5
-7. Mayank, M. (2021, September 7). A guide to the knowledge graphs. Medium. https://towardsdatascience.com/a-guide-to-the-knowledge-graphs-bfb5c40272f1
-8. Bock, T. (2022, September 13). What is a dendrogram?. Displayr. 
+- 3. Welcome to Vadersentiment’s documentation! Welcome to VaderSentiment’s documentation! - VaderSentiment 3.3.1 documentation. (n.d.). https://vadersentiment.readthedocs.io/en/latest/
+- 4. GeeksforGeeks. (2022, October 18). Named entity recognition. GeeksforGeeks. https://www.geeksforgeeks.org/named-entity-recognition/
+- 5. Yadav, K. (2022, November 8). The Complete Practical Guide to Topic Modelling. Medium. https://towardsdatascience.com/topic-modelling-f51e5ebfb40a
+- 6. Winastwan, R. (2020, October 2). Visualizing word embedding with PCA and T-Sne. Medium. https://towardsdatascience.com/visualizing-word-embedding-with-pca-and-t-sne-961a692509f5
+- 7. Mayank, M. (2021, September 7). A guide to the knowledge graphs. Medium. https://towardsdatascience.com/a-guide-to-the-knowledge-graphs-bfb5c40272f1
+- 8. Bock, T. (2022, September 13). What is a dendrogram?. Displayr. 
 https://www.displayr.com/what-is-dendrogram/
-9. Lim, Y. (2022, April 5). Stacked ensembles - improving model performance on a higher level. Medium. https://towardsdatascience.com/stacked-ensembles-improving-model-performance-on-a-higher-level-99ffc4ea5523
-10. Chamblee, B. (2022, February 7). What is cosine similarity? how to compare text and images in Python. Medium. 
+- 9. Lim, Y. (2022, April 5). Stacked ensembles - improving model performance on a higher level. Medium. https://towardsdatascience.com/stacked-ensembles-improving-model-performance-on-a-higher-level-99ffc4ea5523
+- 10. Chamblee, B. (2022, February 7). What is cosine similarity? how to compare text and images in Python. Medium. 
 https://towardsdatascience.com/what-is-cosine-similarity-how-to-compare-text-and-images-in-python-d2bb6e411ef0
 
 ![image](https://github.com/donthula9908/Text-Summarization/assets/113458680/0ac11382-e333-4f89-8a58-f2d4542e2a68)
