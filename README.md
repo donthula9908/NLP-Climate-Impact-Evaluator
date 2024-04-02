@@ -1,12 +1,12 @@
 Natural Language Processing for Advancing Climate Change Assessment and Policy Decision Making
 
-Naveen Donthula
-Dibya Pandey
-Snigdha Chigurupati
-MPS – Data Science
-DATA 690 – NLP for Practitioners
-Prof. Antonio Diana
-Date: August 16th, 2023
+-Naveen Donthula
+-Dibya Pandey
+-Snigdha Chigurupati
+MPS – Data Science, 
+DATA 690 – NLP for Practitioners, 
+## Prof. Antonio Diana
+#### Date: August 16th, 2023
 
 
 
@@ -14,7 +14,8 @@ Date: August 16th, 2023
 
 
 
-*ABSTRACT*
+# ABSTRACT
+
 Climate change represents a pressing global challenge requiring the analysis of vast amounts of scientific data to guide mitigation and adaptation policies. This research applies natural language processing techniques including summarization, sentiment analysis, named entity recognition, and topic modeling to extract insights from a corpus of US climate data. The project implements an unsupervised extractive summarization algorithm to generate condensed overviews highlighting key information. Further contextual analysis identifies sentiments, entities, relationships, and latent topics. Visualizations like word clouds and knowledge graphs reveal linguistic patterns. Hierarchical clustering uncovers thematic structures within the documents. An ensemble model predicts sentiment from the summaries to efficiently gauge perspectives at scale. The methodologies provide both high-level summaries and a granular analytical understanding of the complex climate dataset. The techniques demonstrate the value of NLP for accelerating discovery and comprehension in climate science. This enables researchers to rapidly synthesize disparate evidence and inform timely, data-driven policy decisions. The project illustrates a pipeline integrating summarization, contextual analysis, relationship extraction, and predictive modeling to unlock transformative knowledge from massive textual data.
 
 
@@ -27,7 +28,8 @@ Climate change represents a pressing global challenge requiring the analysis of 
 
 
 
-INTRODUCTION
+# INTRODUCTION
+
 This project aimed to apply natural language processing techniques to analyze and extract key insights from a large corpus of US climate data. The objectives were to:
 1.	Provide concise overviews of the climate data through summarization.
 2.	Identify contextual details like sentiments, entities, and topics.
@@ -41,51 +43,53 @@ THE IMPORTANCE OF CLIMATE CHANGE ANALYSIS FOR ADAPTATION POLICY
 Climate change represents one of the most crucial problems facing humanity today. It is predominantly driven by greenhouse gas emissions from human activities like fossil fuel combustion, deforestation, and agricultural practices. The resulting greenhouse gas accumulation in the atmosphere traps heat and causes global temperatures to rise. Greenhouse gas emissions continue rising globally, risking catastrophic climate change impacts if unchecked. Temperature and precipitation patterns are already changing, affecting water resources, agriculture, ecosystems, and human health. Climate change exacerbates other societal risks like poverty, migration, and conflict. Tackling climate change requires analyzing immense amounts of scientific data on temperature trends, greenhouse gas levels, sea level rise, and extreme weather events. Localized, regional analysis provides actionable insights for officials to develop targeted, context-specific climate policies and strategies. Climate researchers must synthesize insights from this massive number of peer-reviewed papers, climate model projections, time-series measurements, and policy reports spanning multiple decades.[2]
 ABOUT THE DATA
 The data is collected through various digital prints like ‘The New York Times’, ‘Seattle Washington Post’, and ‘Salt Lake Tribune’, etc. across different geographic regions in the US covering the West, Central, and Eastern regions to understand national and regional variations. It is critical to collect localized regional data because climate change impacts manifest differently across areas due to variances like proximity to coasts, elevation, urban density, and more. Having fine-grained data from diverse sites across the West, Central, and Eastern US allows analysts to model regional variations in rising temperatures, sea level impact, precipitation changes, and extreme weather. These regional insights allow state and city officials to plan localized adaptation strategies.
-METHODOLOGY
-1.	Data Collection
+
+# METHODOLOGY
+
+- 1.	Data Collection
 Climate data was collected from multiple sites across the Western, Central, and Eastern US to enable a regional analysis of climate change impacts based on factors like proximity to coasts, elevation, urbanization, etc. The climate data corpus encompasses approximately 3000-4000 words of textual content per region, spanning the Western, Central, and Eastern United States.
-2.	Data pre-processing
+- 2.	Data pre-processing
 Text preprocessing like removal of stop words, punctuation, and lemmatization normalized the data by filtering out non-essential words and reducing remaining words to their root forms. This improved matching and analysis.
-3.	Text Summarization
+- 3.	Text Summarization
 The project implements an unsupervised extractive text summarization technique to distill key information from large texts into concise overviews. Text summarization is essential for obtaining representative summaries covering the main topics and diverse aspects of a source text. 
 The approach first preprocesses the input text through steps like lowercasing, lemmatization, and stop word removal to normalize the text and focus on meaningful keywords. Word frequencies are then generated and normalized to determine the information content of each non-stop word. 
 Sentence importance scores are calculated by aggregating normalized word frequencies. This enables quantitatively identifying sentences containing more salient information. By scoring sentences based on collective word weights, the model accounts for informative keywords that may be distributed across different parts of a sentence.
 The core summarization function extracts the top N-ranking sentences by importance into the final summary. By extracting sentences directly from the source, the model retains key details and diverse coverage of topics in a condensed overview.
 This unsupervised technique distills informative content relevant to the main themes and discourse in the text. The data-driven word frequency analysis identifies key details in an impartial manner without manual supervision or labeling. The extracted sentences provide a representative summary sample covering the salient information in the source text. 
-4.	Sentiment analysis and subjectivity detection 
+- 4.	Sentiment analysis and subjectivity detection 
 Sentiment analysis and subjectivity detection are critical natural language processing techniques for extracting effective information from text data. Sentiment analysis involves computationally identifying and categorizing opinions in the text to determine the writer's attitude as positive, negative, or neutral. This is often performed by using lexicons or machine learning algorithms that associate words and phrases with sentiment orientation. Sentiment analysis provides crucial insights for applications such as brand monitoring, analyzing customer satisfaction, and gauging public opinion. The project utilizes the VADER sentiment analysis tool to discern the emotional tone of the generated summary.
 Subjectivity detection refers to identifying text that expresses opinions versus objective facts. This can be achieved by using methods like Text Blob to calculate a subjectivity score ranging from 0 to 1, with scores below 0.5 indicating more objective language. Determining the degree of subjectivity within the text is beneficial for tasks like separating factual reporting from opinionated editorials or filtering out objective from subjective content. Overall, sentiment analysis and subjectivity detection allow for a deeper understanding of the affective content and perspectives expressed in textual data. These techniques provide actionable insights across many domains including business, politics, and social science.[3]
-5.	Named entity recognition (NER) 
+- 5.	Named entity recognition (NER) 
 NER is a critical natural language processing technique that automatically identifies and categorizes key nouns and proper names within unstructured text. NER typically leverages machine learning algorithms within NLP libraries like spaCy to label extracted entities as Person, Location, Organization, etc. Performing NER enables sophisticated information extraction by structuring text data around detectable entities. This provides an avenue for numerous downstream applications such as building knowledge graphs, question-answering systems, semantic search, and more. Overall, implementing NER is essential for unleashing the value of text data through enabling relation extraction, knowledge base construction, and advanced text analytics. The ability to automatically tag and classify named entities facilitates richer text understanding and allows organizations to derive enhanced business insights from unstructured data.[4]
-6.	Topic modeling 
+- 6.	Topic modeling 
 Topic modeling is an unsupervised machine learning technique that reveals latent thematic structure within a collection of documents. Our project demonstrates topic modeling that is effectively implemented in Python using sklearn and NMF (non-negative matrix factorization). The steps involved are tokenizing the input text, converting it to a tf-idf weighted term-document matrix, applying NMF to factorize the matrix, and extracting the topics using the resulting term-topic and topic-document matrices. 
 Automatically discovering topics using algorithms like NMF provides crucial insights that would otherwise require extensive human analysis. Extracting semantic topics allows for a more nuanced understanding of document contents, trends, and relationships. This enables fruitful applications in fields like digital humanities, social science, marketing, and more. For example, topic modeling can help cluster news articles and customer feedback by subject, guide recommendations by interest, and summarize large volumes of text. Implementing topic modeling, as illustrated in the sample code, is a vital NLP technique for simplifying, navigating, and gleaning strategic knowledge from massive text corpora.[5]
-7.	Word frequency analysis 
+- 7.	Word frequency analysis 
 Word frequency analysis provides simple yet valuable text mining insights by identifying the most common words and phrases in a document, this can be achieved by tokenizing the text, filtering out stop words and non-alphanumeric, counting word frequencies using Python's Counter, and visualizing the results as a word cloud. 
 Implementing basic word frequency analysis is a key NLP technique for understanding text content and highlighting top terms and themes. The project demonstrates an efficient approach by leveraging NLTK for tokenization and filtration along with data visualization libraries like Matplotlib and word cloud. The results reveal the core topics and concepts discussed within the text in an intuitive graphical format.
 More broadly, identifying word and phrase frequencies enables the extraction of key talking points and summarized content. It complements and provides an entry point for more advanced NLP tasks like named entity recognition, topic modeling, and sentiment analysis. Word frequency analysis is especially useful for digesting long reports or articles, clustering documents by keywords, and monitoring shifts in terminology over time. This form of simple statistical NLP provides tremendous utility for content analysis and text mining with versatile applications across many domains.
-8.	Word embeddings and word cloud
+- 8.	Word embeddings and word cloud
 Word embeddings represent words as high-dimensional numeric vectors that encode semantic meaning based on contextual usage. The project demonstrates an effective approach for training Word2Vec embeddings on text, reducing dimensionality with t-SNE, and visualizing the embeddings in a 2D scatter plot. 
 Specifically, tokenizing the text, removing stop words, training a Word2Vec model to generate word vectors, and selecting the embeddings for chosen keywords. t-SNE is then utilized to reduce the high-dimensional vectors to 2D for visualization. The resulting scatter plot provides an intuitive graphical view of how words are distributed based on semantic similarity. Words with related meanings cluster together.
 Visualizing embeddings is tremendously useful for understanding model behavior and analyzing linguistic relationships. Best practices are implemented for visually exploring how words are encoded by the model, revealing nuances and connections. More broadly, creating and inspecting word embeddings is a vital NLP technique for tasks like identifying analogies, powering search systems, improving recommendations, and supporting transfer learning. The code demonstrates an effective approach to training, dimensional reduction, and visualization of word vectors for fruitful text analysis.[6]
-9.	Knowledge graph:
+- 9.	Knowledge graph:
 Knowledge graphs provide an intuitive way to represent connections and relationships between entities extracted from text. spaCy's named entity recognition can identify key nouns and proper names, which become nodes in the graph. The find_relationship function implemented in the project then detects verbs and prepositions linking entities to infer semantic relationships. These are encoded as labeled edges in a directed NetworkX graph.
 Visualizing the knowledge graph with Matplotlib highlights how entities are related based on their co-occurrence and interconnections within the text. This enables both a high-level overview of key entities and granular insights into specific relationships. Constructing knowledge graphs is tremendously valuable for unlocking and representing knowledge within documents. The graphs not only summarize entities and connections but also reveal deeper semantics that may not be directly stated.
 More broadly, knowledge graphs are a vital AI technique for tasks like question answering, recommendation systems, searching, and identifying gaps or inconsistencies in knowledge. By encoding entities and relationships in an accessible graph format, knowledge graphs power more nuanced text understanding. The project demonstrates a practical approach to distilling unstructured text into a structured knowledge network. Automatically constructing knowledge graphs from text is crucial for connecting information and deriving actionable insights.[7]
 
 
-10.	Hierarchical Clustering:
+- 10.	Hierarchical Clustering:
 Hierarchical clustering is an unsupervised learning technique for identifying latent groups and structures within unlabeled data. The provided code demonstrates an effective implementation for text data using scikit-learn's Agglomerative Clustering. The keywords from the text summary are first converted into numerical features with CountVectorizer. Agglomerative clustering is then applied to group the keywords based on similarity. The resulting dendrogram visualization provides intuition about document clustering.
 Hierarchical clustering is immensely valuable for digesting and navigating large collections of text. By identifying semantic clusters, related content can be discovered without needing explicit categorization or labels. The code implemented has best practices like TF-IDF vectorization and Ward's linkage method to extract meaningful hierarchies for text mining. The dendrogram intuitively displays the nested groupings, providing visualization of how the algorithm partitions the content.
 More broadly, hierarchical clustering helps uncover thematic structures, relationships and overlaps within-corpus data. The technique can power applications like document organization, recommendation systems, search, and identifying patterns. Implementing hierarchical clustering and inspecting the dendrograms enables nuanced text analysis without supervision. The project demonstrates a robust unsupervised learning approach for clustering text data and extracting insights.[8]
-11.	Predictive analytics based on sentiment.
+- 11.	Predictive analytics based on sentiment.
 Sentiment analysis on automatically generated extractive summaries provides an effective pipeline for analyzing affect and perspectives within large text corpora. Recent research has explored predictive modeling approaches using supervised learning algorithms to classify sentiment based on summarized content. Key steps in this process include:
 1) Generating a concise summary covering the most salient information. This reduces computational expenses while retaining indicative content.
 2) Processing the summary sentences with spaCy for polarity scoring using VADER or other lexicons. 
 3) Structuring the data and training an ensemble model stacking logistic regression, random forests, SVMs, and a logistic regression meta-learner.
 4) Evaluating model performance using cross-validation and metrics like accuracy, precision, recall, and F1 on held-out test data.
 Predictive sentiment analysis on summaries has been shown to achieve high performance while minimizing computational costs for large corpora. This allows efficient analysis of opinions and effects at scale. Applications include tracking brand sentiment across news and social media, analyzing customer feedback, and monitoring public discourse. The code implemented in the project demonstrates effective implementation of this predictive text analytics pipeline using standard NLP libraries and ensemble modeling. Further research can explore the impact of different summarization techniques and model architectures. Overall, this technique provides versatile capabilities for generating actionable insights from text data.[9]
-12.	Cosine similarity between summaries
+- 12.	Cosine similarity between summaries
 This research implements cosine similarity to compare semantic closeness between regional climate documents. The text data from Western, Central, and Eastern US is preprocessed by lowercasing, removing punctuation, and stemming words to their root forms. Scikit-learn's TfidfVectorizer then converts the normalized text into TF-IDF vector representations encapsulating word frequencies. Cosine similarity is calculated between vector pairs using matrix multiplication to quantify similarity based on the angle between vectors.
 Computing similarity enables discovering relationships within the corpus to identify patterns, trends, and variations across regions. The code demonstrates a robust process for textual similarity analysis using TF-IDF vectorization and cosine similarity. This unsupervised technique is foundational for numerous applications in information retrieval, natural language processing, and text analytics. Overall, cosine similarity provides an efficient method to compare documents based on semantic content rather than surface-level features. Assessing similarity is crucial for clustering documents, improving search relevancy, analyzing trends, and gaining insights from unstructured text data.[10]
 
@@ -95,7 +99,7 @@ Computing similarity enables discovering relationships within the corpus to iden
 
 
 
-RESULTS AND DISCUSSION
+# RESULTS AND DISCUSSION
 	West	Central	East
 Sentiment Analysis	{'neg': 0.063, 'neu': 0.871, 'pos': 0.066, 'compound': 0.0258}
 
@@ -273,7 +277,7 @@ Exploring diverse NLP tasks like semantic role labeling to identify climate acto
 
 
 
-REFERENCES:
+## REFERENCES:
 1.Brownlee, J. (2019, August 7). A gentle introduction to text summarization. MachineLearningMastery.com. https://machinelearningmastery.com/gentle-introduction-text-summarization/
 2. NASA. (2022a, July 18). Climate change adaptation and mitigation. NASA.
 https://climate.nasa.gov/solutions/adaptation-mitigation/
